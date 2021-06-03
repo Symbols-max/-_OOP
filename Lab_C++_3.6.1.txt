@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+ int var = 2;
+inline void increment(int var);
+inline void increment(int,int i);
+
+int main(void) {
+for(int i = 1; i < 10; i++)
+if(i % 2)
+increment(var);
+else
+increment(var,i);
+cout << var << endl;
+return 0; }
+
+
+void increment(int var){
+    var=var++;
+   // cout << var << endl;
+}
+
+void increment(int var, int i){
+    var=var+i;
+   // cout << var << endl;
+}
