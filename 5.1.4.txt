@@ -1,0 +1,48 @@
+
+#include <iostream>;
+#include <string>
+using namespace std;
+
+class ShopItemOrder
+{
+	public:
+		ShopItemOrder(string name, double price, int quantity) {
+			this->name = name;
+			this->price = price;
+			this->quantity = quantity;
+		}
+
+		void setName(string name)
+		{
+			this->name;
+		}
+		void setPrice(double price)
+		{
+			this->name;
+		}
+		void setQuantity(int quantity)
+		{
+			this->name;
+		}
+
+		double count() {
+			return price * quantity;
+		}
+
+		void print() {
+			cout <<"name: "<<name<<",\t"<<"quantity: "<<quantity<<",\t"<<"price: "<<price << ",\t" 
+				<<"Total price: "<<count()<<endl;
+		}
+
+private:
+	string name;
+	double price;
+	int quantity;
+};
+
+
+int main() {
+	ShopItemOrder sip("book", 10.25, 2);
+	sip.print();
+	return 0;
+}

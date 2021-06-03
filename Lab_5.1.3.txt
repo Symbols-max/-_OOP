@@ -1,0 +1,48 @@
+using namespace std;
+#include <iostream>;
+
+class AdHocSquare
+{
+public:
+	AdHocSquare(double side) {
+		this->side = side;
+		this->sss = side;
+		print_area(side);
+	};
+	double getSss() {
+		return sss;
+	};
+	void set_side(double side) {
+		this->side = side;
+	};
+	double get_side() {
+		return side;
+	};
+private:
+	double side;
+	double sss;
+	void print_area(double side) {
+		cout<<side * side;
+	};
+};
+class LazySquare
+{
+	
+public:
+
+	void count(AdHocSquare ad) {
+		if (ad.get_side() != ad.getSss())
+			cout << ad.get_side() * ad.get_side();
+	};
+private:
+	double side;
+};
+
+int main() {
+	AdHocSquare ahs(4.0);
+	ahs.set_side(5.0);
+	LazySquare ls;
+	ls.count(ahs);
+
+	return 0;
+}
